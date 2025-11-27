@@ -73,8 +73,8 @@ def plot_equipment_analysis(df, column):
     
     # Crear DataFrame para mostrar
     data_df = pd.DataFrame({
-        'Estado': counts.index,
-        'Frecuencia': counts.values,
+        'Respuesta': counts.index,
+        'Conteo': counts.values,
         'Porcentaje': [f"{p}%" for p in percentages.values]
     })
     
@@ -135,8 +135,8 @@ def plot_equipment_med(df, column):
     
     # Crear DataFrame para mostrar
     data_df = pd.DataFrame({
-        'Estado': counts.index,
-        'Frecuencia': counts.values,
+        'Respuesta': counts.index,
+        'Conteo': counts.values,
         'Porcentaje': [f"{p}%" for p in percentages.values]
     })
     
