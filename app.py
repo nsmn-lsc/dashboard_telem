@@ -1,10 +1,13 @@
 import streamlit as st
 import pandas as pd
+import os
 from funciones import plot_pie_with_table, plot_equipment_analysis, plot_equipment_med
+
 st.title("Analisis de respuestas -Telemedicina-♟️")
 st.subheader("Respuestas de 395 unidades")
 
-file = "/home/najera/Data/dasboard_telem/especificaciones_clean.xlsx"
+# Usar ruta relativa que funcione tanto local como en Streamlit Cloud
+file = os.path.join(os.path.dirname(__file__), "data", "especificaciones_clean.xlsx")
 df = pd.read_excel(file)
 cols_si_no = ["Triage","Consulta","Seguimiento","Interconsulta","Asesoría médica","Monitoreo","Interpretación diagnóstica","Pase de visita","Educación en salud","Coordinación de servicios en salud","Mentoría","Promoción de la salud"]
 df_medica = df[cols_si_no]

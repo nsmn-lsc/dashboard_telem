@@ -19,10 +19,10 @@ ENV/
 # Streamlit
 .streamlit/
 
-# Data
-*.csv
-*.xlsx
-*.xls
+# Data (exclude data directory from ignore)
+# *.csv
+# *.xlsx
+# *.xls
 /home/najera/Data/
 
 # OS
