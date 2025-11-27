@@ -21,7 +21,7 @@ st.dataframe(data_df, use_container_width=True, hide_index=True)
 
     # Equipo tecnologico
 st.subheader("Análisis de equipamiento tecnológico 🖥️")
-cols_equipamiento = ["Computadora de Escritorio","Computadora Portatil (laptop)","Tableta Electrónica","Teléfóno Inteligente","Teléfóno Convencional","UPS o Nobreak","Cámara WEB","Audifonos con micrófono ","Sistema de Videoconferencia","Plataforma de Videoconferencia (VC)","Licencias de Software de VC","Plataforma de telemedicina"]
+cols_equipamiento = ["Computadora de Escritorio","Computadora Portatil (laptop)","Tableta Electrónica","Telefóno Inteligente","Telefóno Convencional","UPS o Nobreak","Cámara WEB","Audifonos con microfóno\xa0","Sistema de Videoconferencia","Plataforma de Videoconferencia (VC)","Licencias de Software de VC","Plataforma de telemedicina"]
 df_equipamiento = df[cols_equipamiento]
 columna_equip = st.selectbox("Selecciona la columna de equipamiento para el análisis:", df_equipamiento.columns)
 fig_equip, data_equip = plot_equipment_analysis(df_equipamiento, columna_equip)
@@ -31,7 +31,7 @@ st.dataframe(data_equip, use_container_width=True, hide_index=True)
 
     #Equipo medico
 st.subheader("Análisis de equipamiento médico 🩻")
-cols_equipamiento_med = ["Esfigmomanómetro","Oxímetro de Pulso","Termómetro","Estadímetro","Báscula","Glucómetro","Electrocardíógrafo Portatil (1-6 derivaciones)","Estuche Diagnóstico","Estetoscopio","Estación de telemedicina","Estación telerradiología","Estación telemastografía"]
+cols_equipamiento_med = ["Esfigmomanómetro","Oxímetro de Pulso","Termómetro","Estadímetro","Báscula","Glucómetro","Electrocardiógrafo Portatil (1-6 derivaciones)","Estuche Diagnóstico","Estetoscopio","Estación de telemedicina","Estación telerradiología","Estación telemastografía"]
 df_equipamiento_med = df[cols_equipamiento_med]
 columna_equip_med = st.selectbox("Selecciona la columna de equipamiento médico para el análisis:", df_equipamiento_med.columns)
 fig_equip_med, data_equip_med = plot_equipment_med(df_equipamiento_med, columna_equip_med)
