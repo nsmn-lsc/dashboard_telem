@@ -14,8 +14,10 @@ def plot_pie_with_table(df, column):
     fig = make_subplots(
         rows=1, cols=2,
         specs=[[{"type": "pie"}, {"type": "table"}]],
-        column_widths=[0.6, 0.4],
-        subplot_titles=(f'Distribución de {column}', 'Resumen de datos')
+        column_widths=[0.55, 0.45],
+        subplot_titles=(f'{column}', 'Datos'),
+        horizontal_spacing=0.15,
+        vertical_spacing=0.1
     )
     
     # Agregar pie chart
@@ -50,11 +52,16 @@ def plot_pie_with_table(df, column):
     )
     
     fig.update_layout(
-        height=500,
+        height=550,
         showlegend=False,
         title_text=f"Análisis de {column}",
-        title_x=0.5
+        title_x=0.5,
+        title_font_size=16,
+        margin=dict(t=100, b=50, l=20, r=20)
     )
+    
+    # Ajustar tamaño de fuente de los subtítulos
+    fig.update_annotations(font_size=13)
     
     return fig
 
@@ -78,8 +85,10 @@ def plot_equipment_analysis(df, column):
     fig = make_subplots(
         rows=1, cols=2,
         specs=[[{"type": "pie"}, {"type": "table"}]],
-        column_widths=[0.6, 0.4],
-        subplot_titles=(f'Equipamiento: {column}', 'Estadísticas')
+        column_widths=[0.55, 0.45],
+        subplot_titles=(f'{column}', 'Datos'),
+        horizontal_spacing=0.15,
+        vertical_spacing=0.1
     )
     
     # Colores personalizados
@@ -118,11 +127,16 @@ def plot_equipment_analysis(df, column):
     )
     
     fig.update_layout(
-        height=500,
+        height=550,
         showlegend=False,
-        title_text=f"Análisis de Equipamiento Tecnológico: {column}",
-        title_x=0.5
+        title_text=f"Equipamiento Tecnológico",
+        title_x=0.5,
+        title_font_size=16,
+        margin=dict(t=100, b=50, l=20, r=20)
     )
+    
+    # Ajustar tamaño de fuente de los subtítulos
+    fig.update_annotations(font_size=13)
     
     return fig
 
@@ -146,8 +160,10 @@ def plot_equipment_med(df, column):
     fig = make_subplots(
         rows=1, cols=2,
         specs=[[{"type": "pie"}, {"type": "table"}]],
-        column_widths=[0.6, 0.4],
-        subplot_titles=(f'Equipamiento Médico: {column}', 'Estadísticas')
+        column_widths=[0.55, 0.45],
+        subplot_titles=(f'{column}', 'Datos'),
+        horizontal_spacing=0.15,
+        vertical_spacing=0.1
     )
     
     # Colores personalizados
@@ -186,10 +202,15 @@ def plot_equipment_med(df, column):
     )
     
     fig.update_layout(
-        height=500,
+        height=550,
         showlegend=False,
-        title_text=f"Análisis de Equipamiento Médico: {column}",
-        title_x=0.5
+        title_text=f"Equipamiento Médico",
+        title_x=0.5,
+        title_font_size=16,
+        margin=dict(t=100, b=50, l=20, r=20)
     )
+    
+    # Ajustar tamaño de fuente de los subtítulos
+    fig.update_annotations(font_size=13)
     
     return fig
