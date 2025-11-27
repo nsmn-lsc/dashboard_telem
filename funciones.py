@@ -43,7 +43,7 @@ def plot_pie_with_table(df, column):
                 values=[counts.index, counts.values, [f"{p}%" for p in percentages.values]],
                 fill_color='lavender',
                 align='center',
-                font=dict(size=11)
+                font=dict(size=11, color='black')
             )
         ),
         row=1, col=2
@@ -111,7 +111,7 @@ def plot_equipment_analysis(df, column):
                 values=[counts.index, counts.values, [f"{p}%" for p in percentages.values]],
                 fill_color='lavender',
                 align='center',
-                font=dict(size=11)
+                font=dict(size=11, color='black')
             )
         ),
         row=1, col=2
@@ -179,7 +179,7 @@ def plot_equipment_med(df, column):
                 values=[counts.index, counts.values, [f"{p}%" for p in percentages.values]],
                 fill_color='aliceblue',
                 align='center',
-                font=dict(size=11)
+                font=dict(size=11, color='black')
             )
         ),
         row=1, col=2
