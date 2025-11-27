@@ -15,7 +15,7 @@ st.write("Datos cargados exitosamente. 💾")
 st.subheader("Análisis de columnas de cosas medicas que no se como englobar 🩺")
 columna = st.selectbox("Selecciona la columna para el análisis:", df_medica.columns)
 fig = plot_pie_with_table(df_medica, columna)
-st.pyplot(fig)
+st.plotly_chart(fig, use_container_width=True)
 
 
     # Equipo tecnologico
@@ -24,7 +24,7 @@ cols_equipamiento = ["Computadora de Escritorio","Computadora Portatil (laptop)"
 df_equipamiento = df[cols_equipamiento]
 columna_equip = st.selectbox("Selecciona la columna de equipamiento para el análisis:", df_equipamiento.columns)
 fig_equip = plot_equipment_analysis(df_equipamiento, columna_equip)
-st.pyplot(fig_equip)
+st.plotly_chart(fig_equip, use_container_width=True)
 
 
     #Equipo medico
@@ -33,4 +33,4 @@ cols_equipamiento_med = ["Esfigmomanómetro","Oxímetro de Pulso","Termómetro",
 df_equipamiento_med = df[cols_equipamiento_med]
 columna_equip_med = st.selectbox("Selecciona la columna de equipamiento médico para el análisis:", df_equipamiento_med.columns)
 fig_equip_med = plot_equipment_med(df_equipamiento_med, columna_equip_med)
-st.pyplot(fig_equip_med)
+st.plotly_chart(fig_equip_med, use_container_width=True)
