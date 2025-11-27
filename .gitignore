@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Streamlit
+.streamlit/
+
+# Data
+*.csv
+*.xlsx
+*.xls
+/home/najera/Data/
+
+# OS
+.DS_Store
+Thumbs.db
